@@ -1,0 +1,53 @@
+START 
+	STR welcome IS "Welcome to IRCE programming language";
+
+	USER userirem IS irem;
+	USER userdece IS denizece;
+	USER usereceo IS ece;
+
+	ADDRESS irem IS "Hacettepe Universitesi Beytepe Kampusu";
+	ADDRESS dece IS "Yenimahalle";
+	ADDRESS ece IS "Kızılay Merkez";
+
+	INT five IS 5;
+
+	ROAD istanbul IS "E5";
+	ROAD ankara IS "Dumlupınar Bulvarı";
+
+	CROSSROAD crossroad IS "complicated";
+
+	ARRAY STR usersaddr IS (irem dece ece);
+
+	LONGITUDE enlem IS "39°52'17"";
+	LATITUDE boylam IS "32°44'12"";
+
+	GRAPH LONGITUDE LATITUDE map IS (39 52 17,32 44 12) (39 54 46,32 48 57) (39 55 20,32 49 36);
+
+	CALL ShowOnMap(40 44 20,73 56 44);
+	CALL SearchLocation("Cankaya");
+	CALL GetRoadSpeed(5);
+	CALL GetLocation(irem);
+	CALL ShowTarget("Yenimahalle");
+	CALL ShowCrossRoad(23);
+
+	CALL Print("Print function is awesome.");
+
+	IF irem == ece:
+		RETURN "irem and ece are same";
+	ELSE
+		RETURN 0;
+	ENDIF;
+
+	INT counter IS 1;
+
+	WHILE counter <= 3:
+		counter = counter + 1;
+	ENDWHILE;
+
+	FUNC Multiply(INT arg INT arg):
+		RETURN result; 
+	ENDFUNC;
+
+	CALL Multiply(3 5);
+
+END
